@@ -1,0 +1,9 @@
+# speaker id index, typically the host is the first speaker, so 0 would mute them
+mute-speaker-index: 0
+
+# skip duration for each fast forward step until speaker is not longer detected
+skip-duration-step: 5
+
+# dataset and model used to detect speaker voices
+dataset: anton-l/superb_demo
+model: superb/wav2vec2-base-superb-sid
