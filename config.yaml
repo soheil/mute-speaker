@@ -1,9 +1,15 @@
-# speaker id index, typically the host is the first speaker, so 0 would mute them
-mute-speaker-index: 0
+# specify speaker id, below is speaker ID for Joe Rogan, you can see the logs
+# in /tmp/mute_speaker.log for all detected speakers for currently playing audio
+mute-speaker-ids:
+  - id10210
 
-# skip duration for each fast forward step until speaker is not longer detected
-skip-duration-step: 5
+# skip counts of 5secs each to fast forward until speaker is not longer detected
+skip-five-seconds-count: 7
+
+# number of seconds to listen to audio before detecting speaker
+analyze-duration: 2
 
 # dataset and model used to detect speaker voices
 dataset: anton-l/superb_demo
 model: superb/wav2vec2-base-superb-sid
+
